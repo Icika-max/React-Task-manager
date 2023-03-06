@@ -6,7 +6,7 @@ import { useEffect, useState } from 'react';
 function TaskList() {
   const [tasks, setTasks]=useState([])
   useEffect(()=>{
-    fetch ("https://icika.onrender.com/tasks")
+    fetch ("http://localhost:9292/tasks")
     .then(r=>r.json())
     .then(data=>setTasks(data.data))
   },[])

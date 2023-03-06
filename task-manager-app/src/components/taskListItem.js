@@ -32,7 +32,7 @@ function TaskListItem({ task}) {
     </li>
     <button onClick={()=>{
     const { error, patchResponse, patch } = usePatch(
-      `https://icika.onrender.com/tasks/${task.id}`
+      `http://localhost:9292/tasks/${task.id}`
     );
     if (error) {
       console.log(error);
